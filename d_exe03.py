@@ -1,21 +1,21 @@
 from plotly.graph_objs import Bar, Layout
 from plotly import offline
-from die import Die
+from dice import Dice
 
 """3. Multiplication:"""
 # Creating 2 dice of D6 and D8 dice.
-die1 = Die(4)
-die2 = Die(4)
+dice1 = Dice(4)
+dice2 = Dice(4)
 
 # Making some results of rolling six-sided dice, and storing the results in a list.
 results = []
 for roll_num in range(1000):
-    result = die1.roll() * die2.roll()
+    result = dice1.roll() * dice2.roll()
     results.append(result)
 
 # Analyze the results.
 frequencies = []
-maxRe = die1.num_sides * die2.num_sides
+maxRe = dice1.num_sides * dice2.num_sides
 for value in range(1, maxRe + 1):
     frequency = results.count(value)
     frequencies.append(frequency)
