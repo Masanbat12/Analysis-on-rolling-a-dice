@@ -1,20 +1,20 @@
 from plotly.graph_objs import Bar, Layout
 from plotly import offline
-from die import Die
+from dice import Die
 
 """2. Three Dice"""
-die1 = Die()
-die2 = Die()
-die3 = Die()
+dice1 = Die()
+dice2 = Die()
+dice3 = Die()
 
 results = []
 # for roll_num in range(1000):
 for roll_num in range(1000):
-    result = die1.roll() + die2.roll() + die3.num_sides
+    result = dice1.roll() + dice2.roll() + dice3.num_sides
     results.append(result)
 
 frequencies = []
-maxRe = die1.num_sides + die2.num_sides + die3.num_sides
+maxRe = dice1.num_sides + dice2.num_sides + dice3.num_sides
 for value in range(1, maxRe + 1):
     frequency = results.count(value)
     frequencies.append(frequency)
@@ -32,10 +32,10 @@ offline.plot({'data': data, 'layout': my_layout}, filename='d6_d6_d6.html')
    Therefore, these are the most common results, and you’re equally likely to roll any one of
    these numbers, with the loop down you can check/see the sum of all the ways to make those results."""
 # results_count = 0
-# for die1 in range(1, 7):
-#     for die2 in range(1, 7):
-#         for die3 in range(1, 7):
-#             total = die1 + die2 + die3
+# for dice1 in range(1, 7):
+#     for dice2 in range(1, 7):
+#         for dice3 in range(1, 7):
+#             total = dice1 + dice2 + dice3
 #             # If the total is one of the desired results, increment its count
 #             if total in results_count:
 #                 results_count[total] += 1
