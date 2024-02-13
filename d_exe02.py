@@ -1,11 +1,11 @@
 from plotly.graph_objs import Bar, Layout
 from plotly import offline
-from dice import Die
+from dice import Dice
 
 """2. Three Dice"""
-dice1 = Die()
-dice2 = Die()
-dice3 = Die()
+dice1 = Dice()
+dice2 = Dice()
+dice3 = Dice()
 
 results = []
 # for roll_num in range(1000):
