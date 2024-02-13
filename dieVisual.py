@@ -1,19 +1,19 @@
 from plotly.graph_objs import Bar, Layout
 from plotly import offline
-from die import Die
+from dice import Dice
 
 # Creating a D6 dice.
-die = Die()
+dice = Dice()
 
 # Making some results of six-sided dice rolls, and storing the results in a list.
 results = []
 for roll_num in range(2000):
-    result = die.roll()
+    result = dice.roll()
     results.append(result)
 
 # Analyze the results.
 frequencies = []
-for value in range(1, die.num_sides + 1):
+for value in range(1, dice.num_sides + 1):
     frequency = results.count(value)
     frequencies.append(frequency)
 # print(results)  # With this we can the result of any roll.
@@ -21,7 +21,7 @@ for value in range(1, die.num_sides + 1):
 # With the list of frequencies, we can make a Histogram of the results.
 
 # Visualize the results.
-x_values = list(range(1, die.num_sides + 1))
+x_values = list(range(1, dice.num_sides + 1))
 data = [Bar(x=x_values, y=frequencies)]
 
 x_axis_config = {'title': 'Result'}
