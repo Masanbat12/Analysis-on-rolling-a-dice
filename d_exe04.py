@@ -1,17 +1,17 @@
 from plotly.graph_objs import Bar, Layout
 from plotly import offline
-from die import Die
+from dice import Dice
 
 """4. Die Comprehensions: on d_exec03"""
 # Creating 2 dice of D6 and D8 dice.
-die1 = Die(4)
-die2 = Die(4)
+dice1 = Dice(4)
+dice2 = Dice(4)
 
 # Making some results of rolling six-sided dice, and storing the results in a list.
-results = [die1.roll() * die2.roll() for roll_num in range(1000)]
+results = [dice1.roll() * dice2.roll() for roll_num in range(1000)]
 
 # Analyze the results.
-maxRe = die1.num_sides * die2.num_sides
+maxRe = dice1.num_sides * dice2.num_sides
 frequencies = [results.count(value) for value in range(1, maxRe + 1)]
 
 # Visualize the results.
