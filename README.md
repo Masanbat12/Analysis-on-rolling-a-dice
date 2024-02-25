@@ -38,7 +38,6 @@ To run the die-rolling and the other file's of simulation and to generate the vi
 "file_name".py
 
 You all can see the results of me run the programs in the: [Pics of results 📂](https://github.com/Masanbat12/Analysis-on-rolling-a-dice/tree/main/Pics%20of%20results)
-[html's files as results 📂](https://github.com/Masanbat12/Analysis-on-rolling-a-dice/tree/main/html's%20files%20as%20results)
 
 
 
